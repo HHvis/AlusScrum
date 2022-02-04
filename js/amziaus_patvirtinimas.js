@@ -4,7 +4,7 @@ let tekstas = document.querySelector(".tekstas_1");
 let tekstas_2 = document.querySelector(".tekstas_2");
 
     mygtukasTaip.addEventListener("click", function (){
-        location.replace("./index.html");
+        location.replace("./pagrindinis.html");
     });
     
     mygtukasNe.addEventListener("click", function (){
