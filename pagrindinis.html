@@ -11,21 +11,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet"> 
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styleindex.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
   <title>Alaus parduotuvė</title>
 </head>
+
 <body>
-    <header >
+  
+  <!-- Header -->
+    <header>
         <div class="container ">
             <div class="navbar row">
                 <div class="logo col-4">
-                    <img src="images/logo4.png" class="col-align-left" width="125px">
-                    <p class="display-6">Alaus parduotuvė</p>
-                    
+                    <!-- <img src="images/logo5.png" class="col-align-left p-3" width="180px">   -->
+                    <a href="pagrindinis.html"><img src="images/logo5.png" alt="HTML tutorial" style="width:180px;height:250px;"></a>                  
                 </div>
                 <div class="col-4">
                         <form >
                           <input placeholder="Paieška" aria-label="Search" class="w-75 rounded">
-                          <button class="btn " type="submit">Paieška</button>
+                          <button class="btn text-white" type="submit">Paieška</button>
                         </form>
                 </div>
                 <div class="col-4">
@@ -42,97 +45,69 @@
 
 <main>
 
-  <div class="jumbotron jumbotron-fluid bg-dark mb-4">
+<!-- Navigacija -->
+<nav>
+  <div class="jumbotron jumbotron-fluid bg-dark">
   
     <div class="jumbotron-background">
       <img src="images/background.jpg" class="blur " width="100%">
     </div>
      <div class="container text-white text-center">
-        <h1 class="display-4">Geriausi 2021 alus</h1>
-      <p class="lead">Geriausius pirkėjų įvertinimus gavę alūs</p>
-      <a class="btn " href="#" role="button">Peržiūrėti</a>
-  
-    </div>
-  </div>
 
-<div class="container mb-4">
-  <div class="row">
-    <div class="col-sm-4">
-  <div class="card border-warning " style="width: 22rem;">
-    <img src="images/beer1.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Alus1</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      <div class="text-center">
-        <a href="#" class="btn ">Daugiau</a>
-        </div>
+      <ul class="nav nav-pills nav-fill justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Pradinis</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="filtravimo.html">Filtravimas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="produktu.html">Produktai</a>
+        </li>
+      </ul>
     </div>
   </div>
-</div>
-<div class="col-sm-4">
-  <div class="card border-warning " style="width: 22rem;">
-    <img src="images/beer2.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Alus2</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      <div class="text-center">
-        <a href="#" class="btn ">Daugiau</a>
-        </div>
-    </div>
-  </div>
-</div>
-<div class="col-sm-4">
-  <div class="card border-warning " style="width: 22rem;">
-    <img src="images/beer3.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Alus3</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      <div class="text-center">
-        <a href="#" class="btn ">Daugiau</a>
-        </div>
-    </div>
-  </div>
-</div>
-</div>
+</nav>
 
-</div>
-<div class="container mb-5">
+<div class="container mb-4 p-2">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-12 col-md-4">
       <div class="card border-warning " style="width: 22rem;">
-        <img src="images/beer1.png" class="card-img-top" alt="...">
+      <img src="images/beer1.png" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Alus1</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <h5 class="card-title">Alus1</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div class="text-center">
-            <a href="#" class="btn ">Daugiau</a>
-            </div>
+          <a href="produktu.html#alus1" class="btn ">Daugiau</a>
+          </div>
         </div>
       </div>
-</div>
-<div class="col-sm-4">
+    </div>
+<div class="col-sm-12 col-md-4">
   <div class="card border-warning " style="width: 22rem;">
     <img src="images/beer2.png" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Alus2</h5>
       <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <div class="text-center">
-        <a href="#" class="btn ">Daugiau</a>
+        <a href="produktu.html#alus2" class="btn ">Daugiau</a>
         </div>
     </div>
   </div>
 </div>
-<div class="col-sm-4">
+<div class="col-sm-12 col-md-4">
   <div class="card border-warning " style="width: 22rem;">
     <img src="images/beer3.png" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Alus3</h5>
       <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <div class="text-center">
-        <a href="#" class="btn ">Daugiau</a>
+        <a href="produktu.html#alus3" class="btn ">Daugiau</a>
         </div>
     </div>
   </div>
+</div>
+</div>
 </div>
 </div>
 
@@ -147,7 +122,7 @@
 <footer>
   <div class="text-center">
     <div class="container">
-      <div class="row">
+      <div class="row text-dark">
         <h4 >
            Susisiekite su mumis
         </h4>
