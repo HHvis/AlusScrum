@@ -10,7 +10,7 @@ let alus3_JSON = JSON.parse(localStorage.getItem("alus3")) || {"pavadinimas": "A
 
 
 let bendraKaina = 0;
-
+let prekiuKiekis = 0;
 
 function pranesimas(){
     Swal.fire({
@@ -18,7 +18,7 @@ function pranesimas(){
          icon: 'success',
          title: 'Prekė įdėta į krepšelį',
          showConfirmButton: false,
-         timer: 1500
+         timer: 1000
        });
  }
 
@@ -150,8 +150,13 @@ if(localStorage.alus1 === undefined && localStorage.alus2 === undefined && local
             location.reload();
             });
         }
-
- 
   }
-
 }
+
+prekiuKiekis = alus1_JSON.kiekis + alus2_JSON.kiekis + alus3_JSON.kiekis;
+
+if(prekiuKiekis > 0 ){
+    document.querySelector("#krepsis").innerHTML += "<div class='dot'></div>";
+    document.querySelector(".dot").innerHTML += prekiuKiekis;
+}
+
