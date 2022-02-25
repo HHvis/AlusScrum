@@ -15,9 +15,28 @@ a {
     margin-right: 2rem;
     color:#14120c;
 }
+.fas{
+    position: relative;
+}
 .fas:hover{
     cursor: pointer;
     color: rgb(59, 59, 216);
+}
+.dot{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 23px;
+    left: 20px;
+    height: 23px;
+    width: 23px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    margin: 0.1rem;
+    background-color: black;
+    border-radius: 50%;
 }
 .logo {
     display: flex;
