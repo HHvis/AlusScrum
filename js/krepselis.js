@@ -3,6 +3,7 @@ let alus2 = document.getElementById("alus2_krepselis");
 let alus3 = document.getElementById("alus3_krepselis");
 let krepselis = document.getElementById("krepselis");
 
+
 let alus1_JSON = JSON.parse(localStorage.getItem("alus1")) || {"pavadinimas": "Alus1", "kaina": 2.99, "kiekis": 0};
 let alus2_JSON = JSON.parse(localStorage.getItem("alus2")) || {"pavadinimas": "Alus2", "kaina": 1.99, "kiekis": 0};
 let alus3_JSON = JSON.parse(localStorage.getItem("alus3")) || {"pavadinimas": "Alus3", "kaina": 2.59, "kiekis": 0};
@@ -53,9 +54,9 @@ if(localStorage.alus1 === undefined && localStorage.alus2 === undefined && local
 } else {
     if(localStorage.alus1)
     {
-        krepselis.innerHTML += "<div class='row p-2'>"+
+        krepselis.innerHTML += "<div class='row p-2 d-flex justify-content-center align-items-center'>"+
                                "<div class='col-3'>" +
-                               "<img src='images/beer1.png' width='25%'>"+
+                               "<img src='images/beer1.png' width='25%'><span style='margin-left: 1rem;'>Alus1</span>"+
                                "</div>"+
                                "<div class='col-3'>"+
                                alus1_JSON.kiekis+
@@ -70,9 +71,9 @@ if(localStorage.alus1 === undefined && localStorage.alus2 === undefined && local
     }
     if(localStorage.alus2)
     {
-        krepselis.innerHTML += "<div class='row p-2'>"+
+        krepselis.innerHTML += "<div class='row p-2 d-flex justify-content-center align-items-center'>"+
                                "<div class='col-3'>" +
-                               "<img src='images/beer2.png' width='25%'>"+
+                               "<img src='images/beer2.png' width='25%'><span style='margin-left: 1rem;'>Alus2</span>"+
                                "</div>"+
                                "<div class='col-3'>"+
                                alus2_JSON.kiekis+
@@ -87,9 +88,9 @@ if(localStorage.alus1 === undefined && localStorage.alus2 === undefined && local
     }
     if(localStorage.alus3)
     {
-        krepselis.innerHTML += "<div class='row p-2'>"+
+        krepselis.innerHTML += "<div class='row p-2 d-flex justify-content-center align-items-center'>"+
                                "<div class='col-3'>" +
-                               "<img src='images/beer3.png' width='25%'>"+
+                               "<img src='images/beer3.png' width='25%'><span style='margin-left: 1rem;'>Alus3</span>"+
                                "</div>"+
                                "<div class='col-3'>"+
                                alus3_JSON.kiekis+
