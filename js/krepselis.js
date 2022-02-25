@@ -2,10 +2,6 @@ let alus1 = document.getElementById("alus1_krepselis");
 let alus2 = document.getElementById("alus2_krepselis");
 let alus3 = document.getElementById("alus3_krepselis");
 let krepselis = document.getElementById("krepselis");
-let nuotrauka = document.getElementById("nuotrauka");
-let kiekis = document.getElementById("kiekis");
-let kaina = document.getElementById("kaina");
-
 
 let alus1_JSON = JSON.parse(localStorage.getItem("alus1")) || {"pavadinimas": "Alus1", "kaina": 2.99, "kiekis": 0};
 let alus2_JSON = JSON.parse(localStorage.getItem("alus2")) || {"pavadinimas": "Alus2", "kaina": 1.99, "kiekis": 0};
