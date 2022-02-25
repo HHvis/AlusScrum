@@ -15,6 +15,10 @@ a {
     margin-right: 2rem;
     color:#14120c;
 }
+.fas:hover{
+    cursor: pointer;
+    color: rgb(59, 59, 216);
+}
 .logo {
     display: flex;
   }
