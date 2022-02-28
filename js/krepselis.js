@@ -9,7 +9,7 @@ let alus2_JSON = JSON.parse(localStorage.getItem("alus2")) || {"pavadinimas": "A
 let alus3_JSON = JSON.parse(localStorage.getItem("alus3")) || {"pavadinimas": "Alus3", "kaina": 2.59, "kiekis": 0};
 
 
-let bendraKaina = 0;
+var bendraKaina = 0;
 let prekiuKiekis = 0;
 
 function pranesimas(){
@@ -104,16 +104,15 @@ if(localStorage.alus1 === undefined && localStorage.alus2 === undefined && local
                                "</div>";
     }
 
-        bendraKaina = bendraKaina + (alus1_JSON.kiekis * alus1_JSON.kaina) + 
-                                    (alus2_JSON.kiekis * alus2_JSON.kaina) +
-                                    (alus3_JSON.kiekis * alus3_JSON.kaina);
-
+        bendraKaina = bendraKaina  + (alus1_JSON.kiekis * alus1_JSON.kaina) + 
+        (alus2_JSON.kiekis * alus2_JSON.kaina) +
+        (alus3_JSON.kiekis * alus3_JSON.kaina);
+        
         krepselis.innerHTML +=  "<div class='row pt-4 pb-4'>"+
                                 "<div class='col-6'>"+
-                                "<a href='#' id='pasalintiPrekes' class='btn'>Pašalinti visas prekes iš krepšelio</a>"+
-                                "</div>"+
+                                "<a href='#' id='pasalintiPrekes' class='btn'>Pašalinti visas prekes iš krepšelio</a>"+"<a href='#' id='pirkti' class='btn' onclick='pristatymas()'>Pirkti</a>"+"</div>"+
                                 "<div class='col-6'>"+
-                                "<span style='font-size: 15px; font-weight:bold;'>Bendra kaina:  $" + bendraKaina.toFixed(2); + "</span>"+
+                                "<span id='kaina' style='font-size: 15px; font-weight:bold;'>Bendra kaina:  $" + bendraKaina.toFixed(2); + "</span>"+
                                 "</div>"+
                                 "</div>";
 
@@ -160,3 +159,48 @@ if(prekiuKiekis > 0 ){
     document.querySelector(".dot").innerHTML += prekiuKiekis;
 }
 
+
+        // pristatymas
+        let pristatymoLangas=document.getElementById("pristatymoLangas");
+        function pristatymas() {
+            pristatymoLangas.style.display = "flex";   
+        
+        }
+         
+        function vieta(){
+            document.getElementById("pristatymoVieta").style.display="block";
+            let radios = document.getElementsByName("pasirinkimas");
+        for(let i = 0, max = radios.length; i < max; i++) {
+            radios[i].onclick = function() {
+                let today = new Date();
+                if(this.value=="kurjeriu"){
+                    var pristatymoData=new Date(today.setDate(today.getDate() +4));
+                    pristatymoData= pristatymoData.toISOString().split('T')[0];   
+                    var message="Preliminari pristatymo data: ";
+                    var bendraKaina= (alus1_JSON.kiekis * alus1_JSON.kaina) + 
+                    (alus2_JSON.kiekis * alus2_JSON.kaina) +
+                    (alus3_JSON.kiekis * alus3_JSON.kaina)+3.99;
+                    document.getElementById("kaina").innerHTML="Bendra kaina:  $" + bendraKaina.toFixed(2);
+                 }
+                else if (this.value=="pastomatu"){
+                    var pristatymoData=new Date(today.setDate(today.getDate() +2));   
+                    pristatymoData= pristatymoData.toISOString().split('T')[0];
+                    var message="Preliminari pristatymo data: ";
+                    var bendraKaina= (alus1_JSON.kiekis * alus1_JSON.kaina) + 
+                    (alus2_JSON.kiekis * alus2_JSON.kaina) +
+                    (alus3_JSON.kiekis * alus3_JSON.kaina)+1.99;
+                    document.getElementById("kaina").innerHTML="Bendra kaina:  $" + bendraKaina.toFixed(2);
+                }
+                else if (this.value=="parduotuveje"){
+                    var message="Atsiimkite prekes šiandien adresu: Gedimino pr. 53";
+                    var pristatymoData="";
+                    var bendraKaina= (alus1_JSON.kiekis * alus1_JSON.kaina) + 
+                    (alus2_JSON.kiekis * alus2_JSON.kaina) +
+                    (alus3_JSON.kiekis * alus3_JSON.kaina);
+                    document.getElementById("kaina").innerHTML="Bendra kaina:  $" + bendraKaina.toFixed(2);
+                }
+                document.getElementById("pristatymoSalygos").innerHTML= message + pristatymoData;
+            }
+        }
+        
+    }
