@@ -29,13 +29,9 @@
                       <button class="btn text-white" type="submit">Paieška</button>
                     </form>
             </div>
-            <div class="col-4">
-                <ul>
-                    <li><a href="pagrindinis.html"><i class="fas fa-home fa-2x"></i></a></li>
-                    <li><a href=""><i class="fas fa-sort fa-2x"></i></a></li>
-                    <li><a href="krepselis.html"><i class="fas fa-shopping-basket fa-2x"></i></a></li>
-                 </ul>             
-            </div>
+            <div class="col-4 text-center">
+              <a href="krepselis.html"><i id="krepsis" class="fas fa-shopping-basket fa-2x "></i></a>        
+      </div>
         </div>
     </div>
 </header>
@@ -77,13 +73,32 @@
             </div>
         </div>
 
-        <div class="row pt-3 d-flex align-items-center text-center">
+        <div class="row  align-items-center text-center">
           <div id="krepselis">
           </div>
         </div>
-
+        <div id="pristatymoLangas" class="row text-left" ">
+           <div class="col-5">
+              <h6><b>Pasirinkite pristatymo būdą: </b></h6>
+              <form onclick="vieta()" >
+              <input type="radio" id="kurjeriu" name="pasirinkimas" value="kurjeriu" >
+              <label for="kurjeriu">Kurjeriu - <b>3.99$</b></label><br>
+              <input type="radio" id="pastomatu" name="pasirinkimas" value="pastomatu">
+              <label for="pastomatu">Paštomatu - <b>1.99$</b></label><br>
+              <input type="radio" id="parduotuveje" name="pasirinkimas" value="parduotuveje">
+              <label for="parduotuveje">Atsiėmimas parduotuvėje - <b>nemokamai!</b></label> 
+            </div >  
+           <div id="pristatymoVieta"  class="col-7">
+            <p id="pristatymoSalygos"></p>
+          </div>     
         </div>
-    </Main>
+        
+        </div>
+       
+     
+        
+
+      </Main>
 
 <!-- Footer -->
 <footer>

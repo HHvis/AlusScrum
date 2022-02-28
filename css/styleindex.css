@@ -4,12 +4,12 @@ header, footer {
     height: 250px;
     margin-top: -10px;
 }
-.navbar ul li {
+/* .navbar ul li {
     display: inline-block;
     margin-right: 1rem;
     text-transform: uppercase;
     font-family: 'Work sans';
-}
+} */
 a {
     text-decoration: none;
     margin-right: 2rem;
@@ -21,6 +21,9 @@ a {
 .fas:hover{
     cursor: pointer;
     color: rgb(59, 59, 216);
+}
+.krepsis {
+    margin-left: 4rem;
 }
 .dot{
     position: absolute;
@@ -152,3 +155,37 @@ ul {
     color: #c59b08;
 }
 
+/* krepselis.html*/
+#pristatymoLangas{
+    display: none;
+    padding: 1rem 4rem ;
+ }
+ #pristatymoVieta{
+    display: none;
+    padding-left: 6rem;
+ }
+ #pristatymoLangas input {
+    visibility: hidden;
+      
+}
+#pristatymoLangas label {
+    background-color: #c59b08;  
+    border-radius: 10px;
+    padding: 0.3rem;
+    margin: 0.2rem;
+    }
+#pristatymoLangas input:checked + label {
+    background-color: #f8c471;
+}
+#pristatymoVieta{
+    text-align: center;
+}
+#pristatymoSalygos {
+    text-align: center;
+    border: 2px solid #deb217;
+    border-radius: 10px;
+    padding: 2rem 0 ;
+    margin: 1.8rem 0;
+}
+
+/* krepselis.html */
