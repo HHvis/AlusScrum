@@ -4,16 +4,16 @@ let alus_3_reitingas = JSON.parse(localStorage.getItem("alus3_reitingas")) || { 
 
 function pranesimasReitingas(){
     Swal.fire({
-        title: 'Reitingas',
-        text: 'Reitingas pridėtas',
+        title: 'Įvertinimas',
+        text: 'Įvertinimas pridėtas',
        confirmButtonText: 'Gerai',
    });
 }
 
 function pranesimasReitingas_2(){
     Swal.fire({
-        title: 'Reitingas',
-        text: 'Reitingas atnaujintas',
+        title: 'Įvertinimas',
+        text: 'Įvertinimas atnaujintas',
        confirmButtonText: 'Gerai',
    });
 }
