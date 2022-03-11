@@ -12,33 +12,37 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styleindex.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.4/sweetalert2.all.js"></script>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
   <title>Alaus parduotuvė</title>
 </head>
+
 <body>
+
   <!-- Header -->
-  <header>
-    <div class="container ">
-        <div class="navbar row">
-            <div class="logo col-4">
-                <!-- <img src="images/logo5.png" class="col-align-left p-3" width="180px">   -->
-                <a href="pagrindinis.html"><img src="images/logo5.png" alt="HTML tutorial" style="width:180px;height:250px;"></a>                  
-            </div>
-            <div class="col-4">
-                    <form >
-                      <input placeholder="Paieška" aria-label="Search" class="w-75 rounded">
-                      <button class="btn text-white" type="submit">Paieška</button>
-                    </form>
-            </div>
-            <div class="col-4 text-center">
-              <a href="krepselis.html"><i id="krepsis" class="fas fa-shopping-basket fa-2x "></i></a>        
+    <header>
+        <div class="container">
+            <div class="navbar row">
+                <div class="logo col-4">
+                    <a href="pagrindinis.html"><img src="images/logo5.png" alt="HTML tutorial" style="width:180px;height:250px;"></a>                  
+                </div>
+                <div class="col-4">
+                        <form >
+                          <input placeholder="Paieška" aria-label="Search" class="w-75 rounded">
+                          <button class="btn text-white" type="submit">Paieška</button>
+                        </form>
+                </div>
+                <div class="col-4 text-center">
+                        <a href="krepselis.html"><i id="krepsis" class="fas fa-shopping-basket fa-2x "></i></a>        
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
    
 
 <main>
 
+<!-- Navigacija -->
+  <nav>
   <div class="jumbotron jumbotron-fluid bg-dark">
   
     <div class="jumbotron-background">
@@ -59,10 +63,88 @@
       </ul>
     </div>
   </div>
+</nav>
 
 
+  <div class="container">
+    <div class="row">
+      <div class="col-4" id="filters" class="country">
+        <legend class="my-3">Kilmės Šalis</legend>
+        <select id="country" class="mt-0 py-2 px-1 border bg-white rounded-md shadow-sm">
+          <option value="">-- Pasirinkti --</option>
+          <option value="Lietuva">Lietuva</option>
+          <option value="Belgija">Belgija</option>
+          <option value="Lenkija">Lenkija</option>
+        </select>
+        <hr>
 
-<footer class="fixed-bottom">
+        <!-- Stiprumas -->
+        <div class="abv">
+          <legend class="my-1">Alkoholio vienetai</legend>
+          <div id="abv">
+            <div class=" item mb-1">
+                <div class="h-3">
+                    <input
+                    type="checkbox"
+                    value="0.0"/>
+                </div>
+              <label class="font-bold">Nealkoholinis</label>
+            </div>
+            <div class=" item mb-1">
+              <div class="h-3">
+                  <input
+                  type="checkbox"
+                  value="5.4"/>
+              </div>
+            <label class="font-bold">iki 6%</label>
+          </div>
+          <div class=" item mb-1">
+            <div class="h-3">
+                <input
+                type="checkbox"
+                value="6.5"/>
+            </div>
+          <label class="font-bold">virš 6% </label>
+        </div>
+        </div>
+        </div>
+        <hr>
+
+        <!-- Kaina -->
+      <div class="price">
+          <legend class="my-1">Kaina</legend>
+        <div class="flex">
+          <div class="price-input">
+          <input 
+            type="text" 
+            maxlength="4" 
+            size="4"
+            value=""
+            id="price-min"/>
+          </div>
+          <div class="py-1">&nbsp;-&nbsp;</div>
+          <div class="price-input">
+          <input
+            type="text"
+            maxlength="4" 
+            size="4"
+            value=""
+            id="price-max"/>
+          </div>
+          <div class="py-0 font-bold">&nbsp;$&nbsp;</div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="goods"
+      class="col-md-8 p-1 text-capitalize"
+    ></div>
+  </div>
+</div>
+</div>
+
+<footer>
   <div class="text-center">
     <div class="container">
       <div class="row text-dark">
@@ -84,6 +166,9 @@
   </div>
 </footer>
 <script src="js/krepselis.js"></script>
+<script src="js/filter.js"></script>
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
 </body>
 </html>
 
