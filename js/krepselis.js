@@ -22,29 +22,34 @@ function pranesimas(){
        });
  }
 
+
+
 if(alus1){
-    alus1.addEventListener("click", function() {
+    $("#alus1_krepselis").live("click", function(){
         pranesimas();
         alus1_JSON.kiekis++;
         localStorage.setItem('alus1', JSON.stringify(alus1_JSON));
-      });
+ });
 }
 
 if(alus2){
-    alus2.addEventListener("click", function() {
+     $("#alus2_krepselis").live("click", function(){
         pranesimas();
         alus2_JSON.kiekis++;
         localStorage.setItem('alus2', JSON.stringify(alus2_JSON));
-      });
+ });
 }
 
 if(alus3){
-    alus3.addEventListener("click", function() {
+     $("#alus3_krepselis").live("click", function(){
         pranesimas();
         alus3_JSON.kiekis++;
         localStorage.setItem('alus3', JSON.stringify(alus3_JSON));
-      });
+ });
 }
+
+
+
 
 
 if(krepselis){
