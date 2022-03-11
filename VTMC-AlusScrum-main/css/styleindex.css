@@ -1,0 +1,191 @@
+header, footer {
+    background-color:#f8c471 ;
+    color:#F2D492;
+    height: 250px;
+    margin-top: -10px;
+}
+/* .navbar ul li {
+    display: inline-block;
+    margin-right: 1rem;
+    text-transform: uppercase;
+    font-family: 'Work sans';
+} */
+a {
+    text-decoration: none;
+    margin-right: 2rem;
+    color:#14120c;
+}
+.fas{
+    position: relative;
+}
+.fas:hover{
+    cursor: pointer;
+    color: rgb(59, 59, 216);
+}
+.krepsis {
+    margin-left: 4rem;
+}
+.dot{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 23px;
+    left: 20px;
+    height: 23px;
+    width: 23px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    margin: 0.1rem;
+    background-color: black;
+    border-radius: 50%;
+}
+.logo {
+    display: flex;
+  }
+
+.jumbotron {
+    position:relative;
+    overflow:hidden;
+  }
+  
+  .jumbotron .container {
+    position:relative;
+    z-index:2;
+    
+    background:rgba(0,0,0,0.2);
+    padding:2rem;
+    border:1px solid rgba(0,0,0,0.1);
+    border-radius:3px;
+  }
+  
+  .jumbotron-background {
+    object-fit:cover;
+    font-family: 'object-fit: cover;';
+    position:absolute;
+    top:0;
+    z-index:1;
+    width:100%;
+    height:100%;
+  }
+  
+  img.blur {
+      -webkit-filter: blur(4px);
+      filter: blur(4px);
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
+  
+  }
+
+
+.btn {
+    background-color: rgb(218, 183, 28);
+}
+
+.card .btn{
+    align-items: center;
+}
+p {
+    font-family: 'Work sans';
+}
+footer{
+
+    color:#F2D492;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+footer ul {
+    
+    list-style-type: none;
+    margin-right: 3rem;
+}
+footer ul li {
+    display: inline;
+    text-decoration: none;
+    padding-right: 2rem;
+}
+footer h4 {
+    padding-bottom: 1rem;
+}
+.nav-pills li a{
+    color: white !important;
+    font-size: large;
+}
+.nav-pills .nav-link.active {
+    background-color: rgb(218, 183, 28);
+}
+ul {
+    list-style-type: none;
+}
+
+/* Retingai */
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/* krepselis.html*/
+#pristatymoLangas{
+    display: none;
+    padding: 1rem 4rem ;
+ }
+ #pristatymoVieta{
+    display: none;
+    padding-left: 6rem;
+ }
+ #pristatymoLangas input {
+    visibility: hidden;
+      
+}
+#pristatymoLangas label {
+    background-color: #c59b08;  
+    border-radius: 10px;
+    padding: 0.3rem;
+    margin: 0.2rem;
+    }
+#pristatymoLangas input:checked + label {
+    background-color: #f8c471;
+}
+#pristatymoVieta{
+    text-align: center;
+}
+#pristatymoSalygos {
+    text-align: center;
+    border: 2px solid #deb217;
+    border-radius: 10px;
+    padding: 2rem 0 ;
+    margin: 1.8rem 0;
+}
+
+/* krepselis.html */
