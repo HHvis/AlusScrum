@@ -36,7 +36,7 @@ function outputGoods(goods) {
       
       <div class="overflow-hidden text-center flex justify-center p-6">
       <a href="produktu.html#${n.name}" class="btn ">Daugiau</a>
-      <a href="#" id="alus1_krepselis" class="btn">Į krepšelį</a>
+      <a href="#" id="alus${n.id}_krepselis" class="btn">Į krepšelį</a>
 </div>
       </div>
       </div>
@@ -52,21 +52,24 @@ const DATA = [
     cost: 2.99,
     country: "Lietuva",
     image: "images/beer1.png",
-    abv: "5.4"
+    abv: "5.4",
+    id: "1"
   },
   {
     name: "alus2",
     cost: 1.99,
     country: "Belgija",
     image: "images/beer2.png",
-    abv: "0.0"
+    abv: "0.0",
+    id: "2"
   },
   {
     name: "alus3",
     cost: 12.59,
     country: "Lenkija",
     image: "images/beer3.png",
-    abv: "6.5"
+    abv: "6.5",
+    id: "3"
   }
 ];
 
