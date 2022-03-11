@@ -27,7 +27,8 @@ var path = window.location.pathname;
 var page = path.split("/").pop();
 
 
-if(page == 'produktu.html'){
+
+if(page == 'pagrindinis.html' || page == 'produktu.html'){
     if(alus1){
         alus1.addEventListener("click", function() {
             pranesimas();
